@@ -8,6 +8,15 @@
 </head>
 <body style="text-align: center;">
     <h1>Bad words</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus odit, maxime a corporis iste tenetur minima illo eius nostrum ex non. Impedit quam distinctio velit accusamus libero, dolorem minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est incidunt doloribus tempore quo blanditiis ad corrupti corporis quae dolores unde debitis, officia natus dolore aspernatur libero explicabo. Aliquam, is. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, explicabo voluptatibus rem suscipit esse vel iste sint voluptatem expedita eius? Velit veniam ipsam, eveniet laboriosam itaque accusamus doloremque. Eaque, odit!</p>
+    <p>
+    <?php
+        $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus odit, maxime a corporis iste tenetur minima illo eius nostrum ex non. Impedit quam distinctio velit accusamus libero, dolorem minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est incidunt doloribus tempore quo blanditiis ad corrupti corporis quae dolores unde debitis, officia natus dolore aspernatur libero explicabo. Aliquam, is. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam lorem.";
+        $word = "";
+        if($_GET){
+            $word = $_GET["word"];
+        }
+        echo str_replace($word, "***", $text);
+    ?>
+    </p>
 </body>
 </html>
